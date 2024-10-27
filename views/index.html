@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Rosebush</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="icon" href="/images/rosebush.jpg" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <button id="changeNameButton">Change Name</button>
+      <span class="title">Rose Bush</span>
+      <p id="userCount">Online: <span>0</span></p>
+    </header>
+    <div class="parent">
+      <div class="child1">
+        <div class="content">
+          <button onclick="createChatRoom()">Create Chat Room</button>
+          <button onclick="joinChatRoom()">Join Chat Room</button>
+        </div>
+        <div class="expand-btn"></div>
+      </div>
+      <div class="child2">
+        <ul id="messages">
+          <li class="info-message">
+            <strong>Welcome to Rosebush!</strong><br />
+            This is a chat of complete anonymity<br />
+            Remember to be respectful and follow the <em>0 rules </em>
+          </li>
+        </ul>
+        <form id="form" action="">
+          <div class="input-group">
+            <label for="inputfile" id="fileLabel">
+              <i class="material-icons">attach_file</i>
+              <input id="inputfile" autocomplete="off" type="file" />
+            </label>
+            <input
+              id="inputmsg"
+              autocomplete="off"
+              placeholder="Type your message..."
+            />
+            <button id="send" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
