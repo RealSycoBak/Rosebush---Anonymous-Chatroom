@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+html {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding-bottom: 0;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    background-color: #36393f;
+    color: #fff;
+    /* overflow: hidden; */
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+}
+
+header {
+    background-color: #202225;
+    color: #fff;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header button#changeNameButton {
+    background: #cb0e40;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    transition-duration: 0.4s;
+}
+
+header button#changeNameButton:hover {
+    background: #fe588a;
+    color: #b0b0b0
+}
+
+header .title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 50px;
+    color: #cb0e40;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+    font-family: 'Reenie Beanie', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    header .title {
+        font-size: 1.2em;
+    }
+
+    header button#changeNameButton {
+        margin-left: 5px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .parent .child1 button {
+        transform: scale(.75);
+    }
+}
+
+
+#userCount {
+    margin: 0;
+}
+
+#userCount span {
+    color: #008f1d;
+}
+
+
+#form {
+    background: rgba(32, 34, 37, 0.9);
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+#fileLabel {
+    border: none;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: #cb0e40;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#inputfile {
+    display: none;
+}
+
+#inputmsg {
+    border: none;
+    padding: 0.5rem;
+    flex-grow: 1;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    background-color: #40444b;
+    color: #fff;
+    min-width: 0;
+}
+
+#inputmsg:focus {
+    outline: none;
+}
+
+#send {
+    background: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    flex: 1;
+    word-break: break-word;
+}
+
+#messages>li {
+    padding: 1rem;
+    border-bottom: 1px solid #4f545c;
+}
+
+#messages>li:last-child {
+    border-bottom: none;
+}
+
+#messages>li:nth-child(odd) {
+    background: #40444b;
+}
+
+#messages>li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#messages .info-message {
+    background-color: #36393f;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    max-height: Calc(100vh - 80px);
+}
+
+.parent .child1 {
+    background: #bc4f5e;
+    display: flex;
+    flex-direction: row;
+    margin-left: -300px;
+    transition: margin 0.3s ease;
+    z-index: 1;
+}
+
+.parent .child1 .content {
+    background: #bc4f5e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    z-index: 2;
+}
+
+.parent .child1 .expand-btn {
+    width: 50px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    pointer-events: none;
+    transition: margin 0.3s ease;
+}
+
+.parent .child1 .expand-btn::before {
+    content: "›";
+}
+
+.parent .child1:hover .expand-btn,
+.parent .child1:hover .expand-btn {
+    margin-left: -50px;
+}
+
+.parent .child1:hover .expand-btn::before,
+.parent .child1:active .expand-btn::before {
+    content: "";
+}
+
+.parent .child1:hover,
+.parent .child1:active {
+    margin-left: 0;
+    margin-right: -250px;
+    box-shadow: 0 0 50px 15px #00000024;
+}
+
+.parent .child1 button {
+    background: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 25px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.parent .child1 button:hover {
+    background: #d5d7dd;
+}
+
+.parent .child1 button:last-child {
+    margin-bottom: 0;
+}
+
+.parent .child2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+
+@media screen and (max-width: 350px) {
+    .parent .child1 {
+        margin-left: -220px;
+    }
+
+    .parent .child1 .content {
+        width: 220px;
+    }
+
+    .parent .child1:hover,
+    .parent .child1:active {
+        margin-left: 0;
+        margin-right: -170px;
+        box-shadow: 0 0 50px 15px #00000024;
+    }
+}
