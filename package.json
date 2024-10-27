@@ -1,0 +1,24 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "dompurify": "^3.0.6",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsdom": "^23.0.1",
+    "nanoid": "^5.0.4",
+    "node-fetch": "^3.2.6",
+    "sanitize-html": "^2.11.0",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.1"
+  }
+}
